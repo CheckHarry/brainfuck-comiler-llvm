@@ -1,0 +1,5 @@
+*.out
+*.ll
+*.bc
+*.obj
+.vscode

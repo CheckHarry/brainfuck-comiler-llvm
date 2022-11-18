@@ -1,0 +1,19 @@
+design of the language
+
+0-arity ins:
+loop start
+loop end
+put 
+get
+
+
+1-arity ins:
+add <number> 
+move <number>
+
+to optimize brainfuck
+i introduce following ins :
+
+add_mul <offset> <number>  # add <number> * *cur_ptr to cur + offset
+move_mul <number> # move <number> * *cur_ptr
+set <number>
