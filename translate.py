@@ -1,5 +1,28 @@
 from pprint import pprint
 
+'''
+For anyone who may interest , ao(x y) stands for the follow operation
+where ptr is where the brainfuck language cursor points to
+
+*(ptr + x) += y * (*ptr)
+
+and set(x) stands for *(ptr) = x
+
+so basically the following instruction translate to:
+
+[-] => set(0)
+[->>>+<<<] => ao(3 1)set(0)
+[->>>++<<<] => ao(3 1)ao(3 1)set(0)
+[->>>++>+<<<<] => ao(3 1)ao(3 1)ao(4 1)set(0)
+
+as long as the loop move back to original position , this can be translated in above manner
+so we make use of the mul instruction and get a significant speed boost
+
+'''
+
+
+
+
 def summary(prg):
     t = []
     cur = 's'
@@ -104,6 +127,8 @@ def combine(sta : str):
             
     
     return k
+
+
 
 
 for record in x:
