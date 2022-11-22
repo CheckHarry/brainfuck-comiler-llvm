@@ -295,6 +295,16 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < prg_size; i++)
     {
+        if (bf_prg[i] == '#')
+        {
+            i ++;
+            while (bf_prg[i] != '#')
+            {
+                i ++;
+            }
+            continue;
+        }
+
         if (bf_prg[i] == 'a' || bf_prg[i] == 's')
         {
             std::string temp = "";

@@ -1,4 +1,4 @@
-python3 translate.py prg > analysis.txt
+python3 translate.py prg2 > analysis.txt
 ./a_improve.out analysis.txt  2> a.ll
 opt -O3 -S a.ll -o a.ll
 opt -O3 -S a.ll -o a.ll
